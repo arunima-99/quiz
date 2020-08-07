@@ -21,7 +21,7 @@
         <archive>
             <manifest>
                 <mainClass>
-                    quiz.QuizValidation
+                    quiz.Quiz
                 </mainClass>
             </manifest>
         </archive>
