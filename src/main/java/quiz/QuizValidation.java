@@ -21,13 +21,21 @@ public class QuizValidation {
 			}
 		}
 		System.out.println("End of the Quiz!");
-		System.out.println("Your Score: "+correct);
+		System.out.println("Your Score: "+correct+"/"+QuestionAnswers.get(0).size());
+		
+		if(correct > QuestionAnswers.get(0).size()/2) {
+			System.out.println("Good Job!:D");
+		}
+		else if(correct == QuestionAnswers.get(0).size()) {
+			System.out.println("Great!");
+		}
+		else {
+			System.out.println("Better luck next time!");
+		}
 	}
 
-	public static void main(String[] args) throws IOException {
-
-		validation("problem.csv");
-
+	public static void main(String args[]) throws IOException {
+		validation(args[0]);
 	}
 
 }
