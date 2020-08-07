@@ -14,7 +14,7 @@ public class Quiz {
 	String resource;
 	int correctAnswers;
 	
-	Quiz(String resource){
+	public Quiz(String resource){
 		
 		this.resource = resource;
 		
@@ -27,7 +27,7 @@ public class Quiz {
 		return parser;	
 	}
 	
-	protected ArrayList<ArrayList<String>> getQuestionsAndAnswers() throws IOException {
+	public ArrayList<ArrayList<String>> getQuestionsAndAnswers() throws IOException {
 		CSVParser parser = returnParser();
 		ArrayList<String> questions = new ArrayList<String>();
 		ArrayList<String> answers = new ArrayList<String>();
@@ -75,11 +75,5 @@ public class Quiz {
 		}
 		
 	}
-	
-	public static void main(String args[]) throws IOException {
-		Quiz quiz1 = new Quiz(args[0]);
-		quiz1.start();
-		quiz1.printResult();
-	}
-	
+
 }
