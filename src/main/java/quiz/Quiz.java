@@ -36,6 +36,7 @@ public class Quiz {
 			questions.add(index,element.get(0)); 
 			answers.add(index, element.get(1));
 		}
+		parser.close();
 		ArrayList<ArrayList<String>> QuestionAnswers = new ArrayList<ArrayList<String>>();
 		QuestionAnswers.add(questions);
 		QuestionAnswers.add(answers);
@@ -57,6 +58,7 @@ public class Quiz {
 			}
 		}
 		System.out.println("End of the Quiz!");
+		sc.close();
 	}
 
 	public void printResult() throws IOException {
